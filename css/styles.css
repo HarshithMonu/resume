@@ -1,0 +1,62 @@
+.navbar{
+    padding:0 0 5px;
+    
+
+}
+body{
+    background-color: #F3F3F3;
+    padding: 2%;
+}
+
+.nav-item{
+    padding: 0 5px;
+}
+.nav-link{
+    font-size: 1.3rem;
+}
+.container-fluid{
+    padding: 2%  5%;
+
+}
+.name{
+    font-weight: bold;
+    font-size: 2rem;
+}
+.img-fluid{
+    max-width: 100%;  height: auto;
+} 
+.text{
+    color: black;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.resss{
+	background-color:#5569DC;
+	color: white;
+	border-radius: 0%;
+}
+.about_r{
+    padding:0 0 2rem;
+    margin:0 20px;
+   
+}
+.exa{
+    margin: 2rem;
+}
+ 
+.edu{
+    padding:2% 4%;
+    margin: 2rem;
+} 
+.ed{
+    padding: 2%;
+} 
+.langg{
+    padding-left: 12%;
+}
+.edr{
+    padding: 1%;
+}
