@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harshith Beera - aspiring Data Analyst</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="g:\hb.png" />
+    <link rel="icon" href="images/hb.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="preload" href="https://thismodernweb.b-cdn.net/f/Freight-Text-Pro-Book.woff2" as="font" type="font/woff2"
+        crossorigin />
+    <link rel="preload" href="https://thismodernweb.b-cdn.net/f/Freight-Text-Pro-Book-Italic.woff2" as="font"
+        type="font/woff2" crossorigin />
+    <link rel="preload" href="https://thismodernweb.b-cdn.net/f/NeueHaasGroteskDisplay-Medium.woff2" as="font"
+        type="font/woff2" crossorigin />
+    <link rel="preload" href="https://thismodernweb.b-cdn.net/f/JetBrainsMono-Light.woff2" as="font" type="font/woff2"
+        crossorigin />
+
+
+    <meta name="description"
+        content="Harshith Beera is a data analyst building informative dashboards that scale businesses." />
+    <meta property="og:title" content="Harshith Beera Data Analyst" />
+    <meta property="og:type" content="website" />
+
+    <style>
+        @font-face {
+            font-family: "Freight Text Pro";
+            src: url("https://thismodernweb.b-cdn.net/f/Freight-Text-Pro-Book.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Freight Text Pro";
+            src: url("https://thismodernweb.b-cdn.net/f/Freight-Text-Pro-Book-Italic.woff2") format("woff2");
+            font-weight: normal;
+            font-style: italic;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "Neue Haas Grotesk Display";
+            src: url("https://thismodernweb.b-cdn.net/f/NeueHaasGroteskDisplay-Medium.woff2") format("woff2");
+            font-weight: bold;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "JetBrains Mono";
+            src: url("https://thismodernweb.b-cdn.net/f/JetBrainsMono-Light.woff2") format("woff2");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --text-color-heading: rgba(255, 255, 255, 1);
+            --text-color-body: rgba(218, 219, 225, 1);
+            --text-color-muted: rgba(129, 130, 141, 1);
+            --text-color-link: rgba(255, 255, 255, 1);
+            --text-underline-color: rgba(162, 164, 170, 0.5);
+            --text-underline-color-hover: rgba(162, 164, 170, 1);
+            --page-color: rgba(0, 0, 0, 1);
+            --border-color: rgba(48, 48, 56, 1);
+            --sans-font-family: "Neue Haas Grotesk Display", system-ui,
+                sans-serif;
+            --serif-font-family: "Freight Text Pro", georgia, serif;
+            --monospace-font-family: "JetBrains Mono", monospace;
+            --body-font-family: var(--serif-font-family);
+            --heading-font-family: var(--sans-font-family);
+            --heading-line-height: 1.05;
+            --body-line-height: 1.5;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --text-color-heading: rgba(0, 0, 0, 1);
+                --text-color-body: rgba(80, 81, 83, 1);
+                --text-color-muted: rgba(102, 105, 117, 1);
+                --text-color-link: rgba(0, 0, 0, 1);
+                --text-underline-color: rgba(126, 136, 155, 0.5);
+                --text-underline-color-hover: rgba(126, 136, 155, 1);
+                --page-color: rgba(247, 247, 248, 1);
+                --border-color: rgba(222, 224, 227, 1);
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            min-width: 0;
+            margin: 0;
+        }
+
+        html {
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            font-variant-numeric: slashed-zero;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 0 1.5rem;
+            background-color: var(--page-color);
+            color: var(--text-color-body);
+            font-family: var(--body-font-family);
+            font-size: 16px;
+            line-height: var(--body-line-height);
+        }
+
+        @media (min-width: 400px) {
+            body {
+                padding: 0 2rem;
+            }
+        }
+
+        @media (min-width: 600px) {
+            body {
+                grid-template-columns: minmax(200px, 500px) 1fr;
+                padding: 0 5rem;
+            }
+        }
+
+        main {
+            position: relative;
+            z-index: 1;
+            max-width: 600px;
+        }
+
+        footer {
+            margin: 4rem 0 2rem 0;
+            font-size: 14px;
+            font-family: var(--body-font-family);
+            color: var(--text-color-muted);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: var(--text-color-heading);
+            margin: 1.5em 0 0.5em;
+            font-family: var(--heading-font-family);
+            line-height: var(--heading-line-height);
+            text-wrap: balance;
+            font-size: 21px;
+        }
+
+        h1 {
+            font-size: clamp(1.5rem, 7vw, 36px);
+            letter-spacing: -0.01em;
+        }
+
+        h2 {
+            font-size: 10.5px;
+            font-family: var(--monospace-font-family);
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            margin: 3.5em 0 2em;
+            color: var(--text-color-muted);
+        }
+
+        em,
+        i {
+            font-family: var(--serif-font-family);
+            font-style: italic;
+            color: var(--text-color-body);
+        }
+
+        code {
+            font-size: 0.8em;
+            font-family: var(--monospace-font-family);
+        }
+
+        a {
+            position: relative;
+            color: var(--text-color-link);
+            text-decoration-color: var(--text-underline-color);
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+
+        a:hover {
+            text-decoration-color: var(--text-underline-color-hover);
+        }
+
+        p {
+            margin-bottom: 0.5rem;
+            text-wrap: pretty;
+        }
+
+        main>p:first-of-type {
+            font-size: clamp(1.1rem, 4vw, 21px);
+        }
+
+        dt {
+            font-family: var(--sans-font-family);
+            color: var(--text-color-heading);
+            font-size: 15px;
+            display: flex;
+            gap: 0.5em;
+        }
+
+        dt i {
+            color: var(--text-color-muted);
+        }
+
+        dd {
+            margin-bottom: 1.5rem;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr;
+            column-gap: 2rem;
+        }
+
+        @media (min-width: 600px) {
+            ul {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        ul li {
+            position: relative;
+            margin-bottom: 0.5rem;
+            padding-left: 1em;
+        }
+
+        @media (min-width: 600px) {
+            ul {
+                margin-bottom: 0.25rem;
+            }
+        }
+
+        ul li::before {
+            content: "";
+            position: absolute;
+            width: 0.5em;
+            height: 1px;
+            top: 12px;
+            left: 0;
+            background-color: var(--text-underline-color);
+        }
+
+        hr {
+            margin: 3rem 0;
+            border: none;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>Harshith Beera, aspiring Data Analyst</h1>
+        <p>
+            I'm Harshith with a strong aspiration to become a Data Analyst. I possess a Bachelor's degree in Computer
+            Science and Engineering, along with a solid foundation in Python and data analysis. My technical skillsets
+            include Python, MySQL, Data Analysis, HTML/CSS and experience with Android development.
+            I have the ability to create compelling dashboards and leverage data visualization and storytelling skills
+            using Power BI and Tableau.
+
+        </p>
+        <hr />
+
+
+        <h2>Work Experience</h2>
+        <dl>
+            <dt>Techuva Solutions Pvt Ltd<i>03/2025 - Present</i></dt><i>Business Development Executive Intern</i>
+            <dd>
+                <p>Managing sales and business development of Temperature Monitoring Systems (IoT solutions for the food
+                    and beverage, dairy, and pharmaceutical industries), including identifying and securing new
+                    customers and prospects from lead generation to deal closure.</p>
+            </dd>
+            <dt>WISE Store<i>08/2020 - 04/2023</i></dt><i>Business Development & Operations Manager</i>
+            <dd>
+                <p>
+                    Implemented new business development strategies using Historical Data.<br>
+                    Cracked a massive deal contributing to a 7% increase in '22 annual profit.<br>
+                    Managed daily operations and ensuring smooth workflow.
+                </p>
+            </dd>
+            <dt>Edugrad <i>05/2019 - 08/2019</i></dt><i>Python Summer Internship</i>
+            <dd>
+                <p>
+                    Created a simulation in data visualization of findings on Breast Cancer.<br>
+                    Carried out Data Cleaning as part to deal with corrupted, missing values using Pandas.<br>
+                    Created a visualization plot to determine the features which are positively or negatively related to
+                    Breast Cancer using Seaborn.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/Breast-Cancer-Visualization" target="_blank">Github
+                            Project</a>
+                    </li>
+                </ul>
+            </dd>
+
+        </dl>
+        <hr />
+
+        <h2>Education</h2>
+        <dl>
+            <dt>Matrusri Engineering College<i>2016-2020</i></dt>
+            <dd>Bachelor of Engineering, <i>Computer Science & Eningeering</i></dd>
+            <dt>Narayana Jr College<i>2014-2016</i></dt>
+            <dd>Telangana State Board of Intermediate Education, <i>MPC</i></dd>
+            <dt>Gowtham Model School<i>2014</i></dt>
+            <dd>Board of Secondary Education, Telangana<i></i></dd>
+        </dl>
+        <hr />
+
+
+        <h2>skills</h2>
+        <dl>
+            <ul>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Tableau</li>
+                <li>Power BI</li>
+                <li>Data Analysis</li>
+                <li>Data visualization</li>
+                <li>Data Science</li>
+                <li>HTML & CSS</li>
+                <li>Android IDE</li>
+                <li>Prompt Engineering</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Microsoft Office</li>
+            </ul>
+        </dl>
+        <hr />
+
+
+
+
+
+
+        <h2>Projects</h2>
+        <dl>
+            <dt>Optimizing London Bike Share Operations through Data-Driven Insights</dt>
+            <dd>
+                <p>
+                    Analyzed historical London bike ride data using Tableau to uncover seasonal trends and identify peak
+                    usage periods.<br>
+                    Created an interactive heatmap to investigate the relationship between weather conditions
+                    (temperature & wind speed) and bike ride patterns, pinpointing peak hourly bike usage patterns.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://public.tableau.com/app/profile/harshith.beera/viz/LondonBikeRides_17091027848980/Dashboard1"
+                            target="_blank">Tableau Dashboard</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>British Airways Review Analysis with Tableau</dt>
+            <dd>
+                <p>
+                    Designed and developed an interactive Tableau dashboard to analyze customer reviews, providing
+                    insights into customer satisfaction.<br>
+                    Identify areas for improvement, and make data-driven decisions to enhance passenger experience.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://public.tableau.com/app/profile/harshith.beera/viz/BritishAirways_Reviews/Dashboard1"
+                            target="_blank">Tableau Dashboard</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>Predicting Customer Churn and Risk Assessment with Power BI</dt>
+            <dd>
+                <p>
+                    Developed a comprehensive Power BI dashboard to analyze customer churn data and identify key risk
+                    factors.<br>
+                    Utilized Power BI visualizations to effectively communicate churn trends and customer segments at
+                    risk, enabling data-driven retention strategies.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/customer-churn-powerbi" target="_blank">Github
+                            Project</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>Employee Insights through MySQL</dt>
+            <dd>
+                <p>
+                    Utilized SQL to extract and transform employee data from an Excel spreadsheet by demonstrating
+                    proficiency in data manipulation and query writing.<br>
+                    Leveraged the extracted data to create an interactive Tableau dashboard for data visualization and
+                    analysis.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/sql_tableau" target="_blank">Github Project</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>Formula 1 Data Analysis</dt>
+            <dd>Leverages the FastF1 API & Egrast API to analyze the laps times and strategy, providing insights into
+                driver performance.</dd>
+            <dt>Social Media Engagement: A Data-Driven Exploration of Posting Time Optimization</dt>
+            <dd>
+                <p>Performed data analysis using Python to identify optimal posting times for maximizing engagement on
+                    Ankur Warikoo's LinkedIn Data.<br>
+                    Leveraged Excel for data cleaning and Seaborn for visualization to present insights effectively.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/Ankur-LI-DA" target="_blank">Github Project</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>Orderbot : A Chatbot Using GPT3.5-Turbo</dt>
+            <dd>Developed a Python-based chatbot utilizing ChatGPT 3.5 Turbo API & prompt engineering techniques.<br>
+                Implemented automated order processing and billing functionalities.<br>
+                Demonstrated proficiency in NLP for user interaction.
+            </dd>
+            <dt>Banana Ripeness Detection using Neural Network Model</dt>
+            <dd>
+                <p>Developed and published a research paper on "Color Recognition Algorithm using a Neural Network Model
+                    in Determining the Ripeness of a Banana". With an accuracy of ~90%.</p>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1m3DFqVYMtuRJYiyNu2QLRj0B7FdiJ86D/view?usp=sharing"
+                            target="_blank">Reasearch Paper</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>Orugallu Tourism App</dt>
+            <dd>
+                <p>
+                    Developed a mobile tourism application for the city of Warangal on Android. It's on PlayStore.<br>
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=harshith.com.guide&pcampaignid=web_share"
+                            target="_blank">PlayStore</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/Orugallu_Tourism_App" target="_blank">Github
+                            Project</a>
+                    </li>
+                </ul>
+            </dd>
+            <dt>ATM & Banking Systems <i>Mini Project</i></dt>
+            <dd>
+                <p>Developed a C++ console application & utilizing header files for code organization and functionality.
+                </p>
+                <ul>
+                    <li>
+                        <a href="https://github.com/HarshithMonu/ATM-Banking-Services-C-" target="_blank">Github
+                            Peoject</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <hr />
+
+        <h2>Certifications</h2>
+        <dl>
+            <dt>Formula 1 Data Analysis Workshop <i>Ian Wright</i></dt>
+            <dd>
+                <p>United Motorsports Academy</p>
+                <ul>
+                    <li>
+                        <a href="https://unitedmotorsportsacademy.graphy.com/share-certificate?serialno=F2CUYV9R"
+                            target="_blank">Certificate</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <hr />
+
+        <h2>Publications</h2>
+        <dl>
+            <dt>Color Recognition Algorithm using a Neural Network Model in Determining the Ripeness of a Banana</dt>
+            <dd>
+                <p>Journal of Engineering Sciences <i>Vol.11 Issue.06 S.No.123</i></p>
+                <ul>
+                    <li>
+                        <a href="https://drive.google.com/file/d/1m3DFqVYMtuRJYiyNu2QLRj0B7FdiJ86D/view?usp=sharing"
+                            target="_blank">Publication</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <hr />
+
+
+
+        <h2>Elsewhere</h2>
+        <p>
+            You can find me around the web as @<em>harshith_beera</em> in most
+            places.
+        </p>
+        <ul>
+            <li>
+                <a href="mailto:harshithbeera3@gmail.com">Email</a>
+            </li>
+            <li>
+                <a href="https://drive.google.com/file/d/1KYKxFQqG95VvpjHC5BwxoUjt5_fNK6CM/view?usp=sharing"
+                    target="_blank">Resume</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/harshith-beera/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <a href="https://github.com/HarshithMonu" target="_blank">GitHub</a>
+            </li>
+
+            <li>
+                <a href="https://public.tableau.com/app/profile/harshith.beera/vizzes" target="_blank">Tableau</a>
+            </li>
+
+        </ul>
+        <footer>
+            Built at home, by hand, with good old
+            <code>HTML</code> and <code>CSS</code>.<br />
+            &copy; 2024 Harshith Beera.
+        </footer>
+    </main>
+</body>
+
+</html>
